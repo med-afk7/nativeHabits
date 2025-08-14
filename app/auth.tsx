@@ -122,7 +122,8 @@ const styles = StyleSheet.create({
     ,
     input:{
         
-        marginBottom:16 , 
+       marginBottom: 16,
+  backgroundColor: "white" , 
     }
 ,
     button:{

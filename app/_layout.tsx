@@ -1,8 +1,9 @@
 import { AuthProvider, useAuth } from "@/lib/auth-context";
 import { Stack, useRouter, useSegments } from "expo-router";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { MD3LightTheme, Provider as PaperProvider } from 'react-native-paper';
 
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 
@@ -44,6 +45,7 @@ function RouteGuard({ children }: { children: React.ReactNode }) {
 
 export default function RootLayout() {
   return (
+    <GestureHandlerRootView style={{flex:1}}>
  <AuthProvider>
         <PaperProvider theme={theme}>
           <SafeAreaProvider>
@@ -55,5 +57,6 @@ export default function RootLayout() {
           </SafeAreaProvider>
         </PaperProvider>
       </AuthProvider>
+      </GestureHandlerRootView>
   );
 }

@@ -10,3 +10,10 @@ export const databases = new Databases(client);
 
 export const DATABASE_ID = process.env.EXPO_PUBLIC_DB_ID;
 export const HABITS_COLLECTION_ID = process.env.EXPO_PUBLIC_HABITS_COLLECTION_ID;
+export const HABITS_COMPLETIONS_COLLECTION_ID = process.env.EXPO_PUBLIC_COMPLETIONS_COLLECTION_ID;
+
+
+export interface RealtimeResponse {
+    events:string [];
+    payload:any;
+}

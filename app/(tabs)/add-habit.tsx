@@ -36,6 +36,7 @@ try{
         }
         );
 
+    
         router.back()
     }
     catch(error){
