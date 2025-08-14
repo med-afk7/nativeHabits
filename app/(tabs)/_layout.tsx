@@ -13,7 +13,7 @@ export default function TabsLayout() {
 
     },
     tabBarActiveTintColor: "#6200ee",
-    tabBarInactiveTintColor: "#66666",
+    tabBarInactiveTintColor: "#666666",
 
 
 

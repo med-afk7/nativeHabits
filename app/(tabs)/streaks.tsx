@@ -1,13 +1,20 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
-
-export default function StreaksScreen(){
-    return(
-
-    <View>
-       
-        <Text>This is a login page</Text>
-        
-        </View>
-)
+export default function StreaksScreen() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>This is a login page</Text>
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    fontSize: 18,
+  },
+});
