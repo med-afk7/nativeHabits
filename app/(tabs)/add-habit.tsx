@@ -36,6 +36,9 @@ try{
         }
         );
 
+        setDescription("");
+        setError("");
+        setTitle("");
     
         router.back()
     }
@@ -54,8 +57,8 @@ try{
 
     <View style={styles.container}>
        
-      <TextInput label="Title" mode="outlined" style={styles.input} contentStyle={{ borderRadius:8}} onChangeText={setTitle}/>
-      <TextInput label="Description" mode="outlined" style={styles.input} contentStyle={{ borderRadius:8}} onChangeText={setDescription}/>
+      <TextInput label="Title" mode="outlined" style={styles.input} contentStyle={{ borderRadius:8}} onChangeText={setTitle} value={title}/>
+      <TextInput label="Description" mode="outlined" style={styles.input} contentStyle={{ borderRadius:8}} onChangeText={setDescription} value={description}/>
 
 
               <View style={styles.frequencyContainer}>
@@ -76,7 +79,7 @@ try{
       >Add Habit</Button>
 
 
-          {error &&<Text style={{color:theme.colors.error}}>{error}</Text> }
+          {error &&<Text style={{color:theme.colors.error}}>{String(error)}</Text> }
         </View>
 )
 }

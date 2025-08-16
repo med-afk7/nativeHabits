@@ -192,23 +192,24 @@ export default function StreaksScreen() {
               style={[styles.card, key === 0 && styles.firstCard]}
             >
               <Card.Content>
-                <Text variant="titleMedium" style={styles.habitTitle}>
-                  {habit.title}
-                </Text>
+             <Text variant="titleMedium" style={styles.habitTitle}>
+                      {String(habit.title ?? "")}
+                                        </Text>
                 <Text style={styles.habitDescription}>
-                  {habit.description}
-                </Text>
+                    {String(habit.description ?? "")}
+                            </Text>
+
                 <View style={styles.statsRow}>
                   <View style={styles.statBadge}>
-                    <Text style={styles.statBadgeText}> 🔥 {streak}</Text>
+                    <Text style={styles.statBadgeText}> 🔥 {String(streak??0)}</Text>
                     <Text style={styles.statLabel}> Current</Text>
                   </View>
                   <View style={styles.statBadgeGold}>
-                    <Text style={styles.statBadgeText}> 🏆 {bestStreak}</Text>
+                    <Text style={styles.statBadgeText}> 🏆 {String(bestStreak??0)}</Text>
                     <Text style={styles.statLabel}> Best</Text>
                   </View>
                   <View style={styles.statBadgeGreen}>
-                    <Text style={styles.statBadgeText}> ✅ {total}</Text>
+                    <Text style={styles.statBadgeText}> ✅ {String(total??0)}</Text>
                     <Text style={styles.statLabel}> Total</Text>
                   </View>
                 </View>

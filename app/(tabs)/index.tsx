@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { ID, Query } from "react-native-appwrite";
 import { Swipeable } from "react-native-gesture-handler";
-import { Button, Surface, Text } from "react-native-paper";
+import { Button, IconButton, Surface, Text } from "react-native-paper";
 import { Habit, HabitCompletion } from "../../types/database.type";
 
 export default function Index() {
@@ -179,7 +179,8 @@ const renderLeftActions = () =>(
       {habits?.length === 0 ? (
         <View style={styles.emptyState}>
           <Text style={styles.emptyStateText}>No Habits yet . Add habits </Text>
-        <Button mode="text" onPress={addRoute} icon={"plus"}> </Button>
+          
+        <IconButton onPress={addRoute} icon={"plus"} />
         </View>
       ) : (
         habits?.map((habit, key) =>(
@@ -210,8 +211,8 @@ const renderLeftActions = () =>(
           
         <View  style={styles.cardContent}>
 
-        <Text style={styles.cardTitle}>{habit.title}</Text>
-        <Text style={styles.cardDescription}>{habit.description}</Text>
+        <Text style={styles.cardTitle}>{String(habit.title)}</Text>
+        <Text style={styles.cardDescription}>{String(habit.description)}</Text>
         <View style={styles.cardFooter}>
           <View style={styles.streakBadge}> 
             <MaterialCommunityIcons name="fire" size={18} color={"#ff9800"}/>

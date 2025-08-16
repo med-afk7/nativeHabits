@@ -82,7 +82,7 @@ style={styles.container}
          />
 
 {error && (
-    <Text style={{color:theme.colors.error}}>{error}</Text>
+    <Text style={{color:theme.colors.error}}>{String(error)}</Text>
 )}
 
 <Button mode="contained"  style={styles.button} onPress={handleAuth}>{isSignUp?"Sign Up" :"Login"}</Button>
